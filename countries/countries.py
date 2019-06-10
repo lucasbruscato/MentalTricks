@@ -4,18 +4,11 @@ import time
 import numpy as np
 
 ############ CHANGE HERE ############
-choice = 'multiplication' # multiplication division addition subtraction
-number_of_practices = np.inf # np.inf for all random elements
+continent = 'oceania' # america africa europe asia oceania
+training_city_and_capital = True # True or False depending if wants to train city & capital or only city
+number_of_practices = 2 # np.inf for all random elements
 
-# first number of operation
-initial_range_1 = 6
-final_range_1 = 10
-
-# second number of operation
-initial_range_2 = 5
-final_range_2 = 10
-
-time_for_response = 2 # in seconds
+time_for_response = 1 # in seconds
 ####################################
 
 country_capital_continent = [
@@ -218,5 +211,48 @@ country_capital_continent = [
     ['Zimbábue', 'Harare', 'África']
 ]
 
-print(country_capital_continent)
+filtered_list = []
+
+for element in country_capital_continent:
+    if continent == 'america' and 'América' in element:
+        filtered_list.append(element)
+    elif continent == 'africa' and 'África' in element:
+        filtered_list.append(element)
+    elif continent == 'europe' and 'Europa' in element:
+        filtered_list.append(element)
+    elif continent == 'asia' and 'Ásia' in element:
+        filtered_list.append(element)
+    elif continent == 'oceania' and 'Oceania' in element:
+        filtered_list.append(element)
+    elif continent == 'all':
+        filtered_list.append(element)
+
+tried_list = []
+
+if number_of_practices == np.inf:
+    number_of_practices = len(filtered_list)
+
+for times in range(0, number_of_practices):
+    random_number = np.random.randint(0, len(filtered_list))
+ 
+    tried_list.append(filtered_list[random_number])
+
+    current_continent = filtered_list[random_number][2]
+    current_country = filtered_list[random_number][0]
+    current_capital = filtered_list[random_number][1]
+
+    filtered_list.pop(random_number)
+
+    print('say ' + current_continent)
+    os.system('say ' + current_continent)
+
+    print('say ' + current_country)
+    os.system('say ' + current_country)
+
+    time.sleep(time_for_response)
+
+    if training_city_and_capital == True:
+        print('say ' + current_capital)
+        os.system('say ' + current_capital)
+        time.sleep(time_for_response)
 

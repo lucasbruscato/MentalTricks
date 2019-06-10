@@ -75,4 +75,3 @@ print(sorted(tried_pairs, key=lambda x: (x[0], x[1])))
 ## subtraction 2-by-2, 3-by-2, 3-by-3
 ## multiplication 2-by-1, 3-by-1, 2-by-2
 ## division 3-by-1, 4-by-1, 3-by-2
-

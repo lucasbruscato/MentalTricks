@@ -1,35 +1,36 @@
 
 import os
 import time
+import datetime
 import numpy as np
 
 ############ CHANGE HERE ############
 choice = 'addition' # multiplication division addition subtraction
-number_of_practices = 4 # np.inf for all random elements
+number_of_practices = 60 # np.inf for all random elements
+time_for_response = 2 # in seconds
 
 # first number of operation
-initial_range_1 = 1
+initial_range_1 = 2
 final_range_1 = 10
 
 # second number of operation
-initial_range_2 = 1
+initial_range_2 = 2
 final_range_2 = 10
-
-time_for_response = 2 # in seconds
 ####################################
 
 all_pairs = []
 tried_pairs = []
 
-for i in range(initial_range_1, final_range_1):
-    for j in range(initial_range_2, final_range_2):
+for i in range(initial_range_1, final_range_1 + 1):
+    for j in range(initial_range_2, final_range_2 + 1):
         all_pairs.append([i, j])
 
-if number_of_practices == np.inf:
-    number_of_practices = len(all_pairs)
+if number_of_practices == np.inf or number_of_practices > len(all_pairs):
+    number_of_practices = len(all_pairs) + 1
 else:
     number_of_practices += 1
 
+print("Begin: " + str(datetime.datetime.now()))
 print("Length of all_pairs: " + str(len(all_pairs)))
 print("All pairs: \n")
 print(all_pairs)
@@ -68,6 +69,7 @@ for times in range(1, number_of_practices):
 
 print("Tried pairs: \n")
 print(sorted(tried_pairs, key=lambda x: (x[0], x[1])))
+print("End: " + str(datetime.datetime.now()))
 
 # personal study path
 ## multiplication 1-by-1

@@ -4,15 +4,15 @@ import time
 import numpy as np
 
 ############ CHANGE HERE ############
-choice = 'multiplication' # multiplication division addition subtraction
-number_of_practices = np.inf # np.inf for all random elements
+choice = 'addition' # multiplication division addition subtraction
+number_of_practices = 4 # np.inf for all random elements
 
 # first number of operation
-initial_range_1 = 6
+initial_range_1 = 1
 final_range_1 = 10
 
 # second number of operation
-initial_range_2 = 5
+initial_range_2 = 1
 final_range_2 = 10
 
 time_for_response = 2 # in seconds

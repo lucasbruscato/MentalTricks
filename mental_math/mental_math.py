@@ -10,12 +10,12 @@ number_of_practices = 60 # np.inf for all random elements
 time_for_response = 2 # in seconds
 
 # first number of operation
-initial_range_1 = 2
-final_range_1 = 10
+initial_range_1 = 3
+final_range_1 = 9
 
 # second number of operation
-initial_range_2 = 2
-final_range_2 = 10
+initial_range_2 = 3
+final_range_2 = 9
 ####################################
 
 all_pairs = []
@@ -31,7 +31,7 @@ else:
     number_of_practices += 1
 
 print("Begin: " + str(datetime.datetime.now()))
-print("Length of all_pairs: " + str(len(all_pairs)))
+print("Length of all pairs: " + str(len(all_pairs)))
 print("All pairs: \n")
 print(all_pairs)
 
@@ -66,7 +66,7 @@ for times in range(1, number_of_practices):
     print('say ' + str(answer) + '\n')
     os.system('say ' + str(answer))
 
-
+print("Length of tried pairs: " + str(len(tried_pairs)))
 print("Tried pairs: \n")
 print(sorted(tried_pairs, key=lambda x: (x[0], x[1])))
 print("End: " + str(datetime.datetime.now()))

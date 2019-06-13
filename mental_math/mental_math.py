@@ -30,7 +30,9 @@ if number_of_practices == np.inf or number_of_practices > len(all_pairs):
 else:
     number_of_practices += 1
 
-print("Begin: " + str(datetime.datetime.now()))
+beginning_time = datetime.datetime.now()
+print("Begin: " + str(beginning_time))
+
 print("Length of all pairs: " + str(len(all_pairs)))
 print("All pairs: \n")
 print(all_pairs)
@@ -69,7 +71,11 @@ for times in range(1, number_of_practices):
 print("Length of tried pairs: " + str(len(tried_pairs)))
 print("Tried pairs: \n")
 print(sorted(tried_pairs, key=lambda x: (x[0], x[1])))
-print("End: " + str(datetime.datetime.now()))
+
+ending_time = datetime.datetime.now()
+print("End: " + str(ending_time))
+
+print("Total time:" + str(ending_time - beginning_time))
 
 # personal study path
 ## multiplication 1-by-1

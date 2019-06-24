@@ -6,17 +6,28 @@ import numpy as np
 
 ############ CHANGE HERE ############
 choice = 'addition' # multiplication division addition subtraction
-number_of_practices = 60 # np.inf for all random elements
-time_for_response = 2 # in seconds
+number_of_practices = 30 # np.inf for all random elements
+time_for_response = 3.5 # in seconds
 
 # first number of operation
-initial_range_1 = 3
-final_range_1 = 9
+#initial_range_1 = 3
+#final_range_1 = 9
+initial_range_1 = 11
+final_range_1 = 99
 
 # second number of operation
-initial_range_2 = 3
-final_range_2 = 9
+#initial_range_2 = 3
+#final_range_2 = 9
+initial_range_2 = 11
+final_range_2 = 99
 ####################################
+
+# personal study path
+## multiplication 1-by-1
+## addition 1-by-1, 2-by-2, 3-by-2, 3-by-3
+## subtraction 2-by-2, 3-by-2, 3-by-3
+## multiplication 2-by-1, 3-by-1, 2-by-2
+## division 3-by-1, 4-by-1, 3-by-2
 
 all_pairs = []
 tried_pairs = []
@@ -31,7 +42,6 @@ else:
     number_of_practices += 1
 
 beginning_time = datetime.datetime.now()
-print("Begin: " + str(beginning_time))
 
 print("Length of all pairs: " + str(len(all_pairs)))
 print("All pairs: \n")
@@ -61,7 +71,7 @@ for times in range(1, number_of_practices):
         sign = ' - '
         voice = ' menos '
 
-    print('say ' + str(random_number_1) + sign + str(random_number_2))
+    print(str(times) + ' - say ' + str(random_number_1) + sign + str(random_number_2))
     os.system('say ' + str(random_number_1) + voice + str(random_number_2))
     time.sleep(time_for_response)
 
@@ -69,17 +79,12 @@ for times in range(1, number_of_practices):
     os.system('say ' + str(answer))
 
 print("Length of tried pairs: " + str(len(tried_pairs)))
-print("Tried pairs: \n")
+print("Tried pairs:")
 print(sorted(tried_pairs, key=lambda x: (x[0], x[1])))
+print('\n')
 
+print("Begin: " + str(beginning_time))
 ending_time = datetime.datetime.now()
 print("End: " + str(ending_time))
-
 print("Total time:" + str(ending_time - beginning_time))
-
-# personal study path
-## multiplication 1-by-1
-## addition 2-by-2, 3-by-2, 3-by-3
-## subtraction 2-by-2, 3-by-2, 3-by-3
-## multiplication 2-by-1, 3-by-1, 2-by-2
-## division 3-by-1, 4-by-1, 3-by-2
+print('\n')

@@ -5,22 +5,21 @@ import datetime
 import numpy as np
 
 ############ CHANGE HERE ############
-choice = 'addition' # multiplication division addition subtraction
+choice = 'multiplication' # multiplication division addition subtraction
 number_of_practices = 30 # np.inf for all random elements
-time_for_response = 3.5 # in seconds
+time_for_response = 3 # in seconds
 
 # first number of operation
-#initial_range_1 = 3
-#final_range_1 = 9
-initial_range_1 = 11
-final_range_1 = 99
+initial_range_1 = 3
+final_range_1 = 9
+#initial_range_1 = 11
+#final_range_1 = 99
 
 # second number of operation
-#initial_range_2 = 3
-#final_range_2 = 9
-initial_range_2 = 11
-final_range_2 = 99
-####################################
+initial_range_2 = 3
+final_range_2 = 9
+#initial_range_2 = 11
+#final_range_2 = 99
 
 # personal study path
 ## multiplication 1-by-1
@@ -28,6 +27,7 @@ final_range_2 = 99
 ## subtraction 2-by-2, 3-by-2, 3-by-3
 ## multiplication 2-by-1, 3-by-1, 2-by-2
 ## division 3-by-1, 4-by-1, 3-by-2
+####################################
 
 all_pairs = []
 tried_pairs = []

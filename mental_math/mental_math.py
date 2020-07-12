@@ -5,15 +5,15 @@ import datetime
 import numpy as np
 
 ############ CHANGE HERE ############
-choice = 'multiplication' # multiplication division addition subtraction
+choice = 'addition' # multiplication division addition subtraction
 number_of_practices = 30 # np.inf for all random elements
-time_for_response = 3 # in seconds
+time_for_response = 2 # in seconds
 
 # first number of operation
 initial_range_1 = 3
 final_range_1 = 9
-#initial_range_1 = 11
-#final_range_1 = 99
+# initial_range_1 = 11
+# final_range_1 = 99
 
 # second number of operation
 initial_range_2 = 3

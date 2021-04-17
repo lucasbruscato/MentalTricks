@@ -72,11 +72,11 @@ for times in range(1, number_of_practices):
         voice = ' menos '
 
     print(str(times) + ' - say ' + str(random_number_1) + sign + str(random_number_2))
-    os.system('say ' + str(random_number_1) + voice + str(random_number_2))
+    #os.system('say ' + str(random_number_1) + voice + str(random_number_2))
     time.sleep(time_for_response)
 
     print('say ' + str(answer) + '\n')
-    os.system('say ' + str(answer))
+    #os.system('say ' + str(answer))
 
 print("Length of tried pairs: " + str(len(tried_pairs)))
 print("Tried pairs:")
